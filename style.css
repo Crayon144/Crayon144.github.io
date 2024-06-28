@@ -2,7 +2,7 @@
 
 #navbar {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
   position: fixed; /* Set the navbar to fixed position */
   top: 0px; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -12,7 +12,7 @@
 #navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -71,6 +71,10 @@ h1 {
 
 .black2gray {
   color: gray;
+}
+
+.gray2black {
+  color: black;
 }
 
 @keyframes fadeInUp {
