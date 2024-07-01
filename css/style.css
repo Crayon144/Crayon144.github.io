@@ -15,6 +15,7 @@ body {
   position: fixed; /* Set the navbar to fixed position */
   top: 0px; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+  z-index: 1;
 }
 
 /* Links inside the navbar */
@@ -123,16 +124,3 @@ body {
     white-space: pre;
   }
 }
-/*
-@media (max-width: 620px) {
-  .hello-message {
-    text-align: start;
-    font-size: 48px;
-  }
-  .typed-cursor,
-  #typing {
-    font-size: 32px;
-    white-space: pre;
-  }
-}
-  */

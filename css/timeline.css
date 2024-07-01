@@ -172,3 +172,37 @@ section#timeline article:nth-child(4) {
     background: #1abc9c;
   }
 }
+
+@media (max-width: 900px) {
+  section#timeline:before {
+    left: 40px;
+  }
+  section#timeline article {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  section#timeline article:nth-child(2n + 2) {
+    display: flex;
+    flex-direction: column;
+
+    section.card {
+      margin: 20px 0 0 100px;
+    }
+  }
+  section#timeline article span.date {
+    position: absolute;
+    bottom: 75%;
+    left: 8px;
+  }
+  section#timeline article span.timePeriod {
+    margin: 0 0 0 0;
+    position: relative;
+    left: 100px;
+  }
+  section#timeline article section.card {
+    position: relative;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+}

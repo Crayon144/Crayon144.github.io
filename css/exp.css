@@ -5,16 +5,17 @@
   width: 80%;
 }
 .projectList {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   background-color: blue;
-  grid-template-columns: 1fr 1fr;
   row-gap: 40px;
-  column-gap: 40px;
+  justify-content: space-around;
 }
 
 .project {
+  display: block;
+  max-width: 500px;
   background-color: red;
-  margin: auto;
   border-radius: 12px;
   overflow: hidden;
   z-index: 0;
@@ -50,10 +51,11 @@
 }
 
 .go-corner {
-  display: flex;
   position: relative;
   width: 48px;
   height: 48px;
+  left: 91%;
+  top: -15%;
   justify-self: center;
   align-self: center;
   background-color: #00838d;
@@ -61,8 +63,9 @@
 }
 
 .go-arrow {
-  margin-top: -4px;
-  margin-right: -4px;
+  position: relative;
+  top: 30%;
+  left: 25%;
   color: white;
   font-family: courier, sans;
 }
