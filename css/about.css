@@ -1,0 +1,42 @@
+#aboutPage {
+}
+
+#aboutPage section.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+img {
+  justify-self: end;
+  align-self: center;
+  border-radius: 12px;
+  max-width: 214px;
+  max-height: 331px;
+}
+
+p {
+  align-self: center;
+  margin-left: 50px;
+}
+
+#aboutPage section.about-content section {
+  width: 50%;
+  align-self: center;
+  text-align: justify;
+}
+
+@media (max-width: 920px) {
+  #aboutPage section.about-content {
+    flex-direction: column;
+  }
+  #aboutPage section.about-content section {
+    width: 95%;
+    margin-top: 30px;
+  }
+  p {
+    margin: 0px;
+    padding: 15px 40px;
+  }
+}

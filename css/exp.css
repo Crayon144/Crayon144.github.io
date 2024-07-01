@@ -83,6 +83,7 @@
   left: 20%;
   color: white;
   font-family: courier, sans;
+  z-index: 2;
 }
 
 @media (max-width: 550px) {
