@@ -1,0 +1,68 @@
+.exp {
+  display: flexbox;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 80%;
+}
+.projectList {
+  display: grid;
+  background-color: blue;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+
+.project {
+  background-color: red;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    z-index: 0;
+    content: " ";
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    top: -10px;
+    right: 0px;
+    background-color: #00838d;
+    border-radius: 0 0 0 12px;
+  }
+
+  &:hover {
+    .projectTitle {
+      color: black;
+      transition: color 500ms linear;
+    }
+    .description {
+      color: black;
+      transition: color 500ms linear;
+    }
+  }
+}
+
+.projectTitle {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.go-corner {
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  justify-self: center;
+  align-self: center;
+  background-color: #00838d;
+  border-radius: 0 0 0 12px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}

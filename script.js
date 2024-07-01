@@ -1,5 +1,5 @@
 let i = 0;
-const name = "^1000 I'm Crehan Santhumayor";
+const name = "^1000 I'm \n Crehan \n Santhumayor";
 const animated = document.querySelector(".fadeInUp-animation");
 let firstScroll = false;
 

@@ -1,7 +1,10 @@
 section#timeline {
   width: 80%;
-  margin: 20px auto;
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   position: relative;
+  display: grid;
 }
 section#timeline:before {
   content: "";
@@ -13,56 +16,53 @@ section#timeline:before {
   width: 2px;
   height: 100%;
   background: white;
+  z-index: -1;
 }
+
 section#timeline article {
+  margin-top: 20px;
   width: 100%;
-  margin: 0 0 20px 0;
   position: relative;
-}
+  display: grid;
+  grid-template-columns: 4fr 1fr 4fr;
 
-section#timeline article:hover {
-  div.inner::before {
-    transform: scale(100);
-  }
-  div.inner p {
-    color: white;
-  }
-  span.timePeriod {
-    background-color: white;
-    color: black;
-    transition: background-color 500ms ease-in, color 500ms linear;
-  }
-}
+  border-radius: 12px;
+  z-index: 0;
 
-section#timeline article:after {
-  content: "";
-  display: block;
-  clear: both;
+  &:hover {
+    section.card::before {
+      transform: scale(100);
+    }
+    section.card p {
+      color: white;
+    }
+    span.timePeriod {
+      background-color: white;
+      color: black;
+      transition: background-color 500ms ease-in, color 500ms linear;
+    }
+  }
 }
 
 section#timeline article span.timePeriod {
   background-color: black;
   color: white;
-  float: right;
-  margin: 15px 310px 0 0;
-  padding: 10px;
   border-radius: 6px;
+  margin-left: 5px;
+  margin-top: 15px;
+  padding: 10px;
+  justify-self: start;
+  align-self: start;
   transition: all 0.2s ease-in-out;
 }
 
-section#timeline article span.timePeriod::before {
-  content: "";
-  color: red;
-}
-section#timeline article div.inner {
-  width: 40%;
-  float: left;
-  margin: 5px 0 0 40px;
-  border-radius: 6px;
-  overflow: hidden;
-  z-index: -1;
+section#timeline article section.card {
+  width: 90%;
+  margin-left: 5%;
   background-color: white;
-
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
   &::before {
     content: "";
     z-index: 0;
@@ -76,93 +76,71 @@ section#timeline article div.inner {
   }
 }
 
-section#timeline article div.inner span.date {
+section#timeline article span.date {
   display: block;
   width: 60px;
   height: 50px;
   padding: 5px 0;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  margin: 0 0 0 -32px;
+  margin-top: 10px;
   border-radius: 100%;
   font-size: 12px;
   font-weight: 900;
-  text-transform: uppercase;
   background: #25303b;
   color: rgba(255, 255, 255, 0.5);
   border: 2px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 0 7px white;
+  justify-self: center;
 }
-section#timeline article div.inner span.date i {
+section#timeline article span.date i {
   margin: 4px 0 0 12px;
 }
-section#timeline article div.inner span.date span {
-  display: block;
-  text-align: center;
-}
-section#timeline article div.inner span.date span.day {
-  font-size: 10px;
-}
-section#timeline article div.inner span.date span.month {
-  font-size: 18px;
-}
-section#timeline article div.inner span.date span.year {
-  font-size: 10px;
-}
-section#timeline article div.inner h2 {
+
+section#timeline article h2 {
   padding: 15px;
-  margin: 0;
+  margin-top: -5px;
   color: #fff;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: -1px;
-  border-radius: 6px 6px 0 0;
+  border-radius: 12px 12px 0 0;
   position: relative;
-  top: -5px;
 }
-section#timeline article div.inner h2:after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: -5px;
-  width: 15px;
-  height: 15px;
-  -webkit-transform: rotate(-45deg);
-}
-section#timeline article div.inner p {
+
+section#timeline article p {
   padding: 15px;
   margin: 0;
   font-size: 14px;
   color: #656565;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 12px 12px;
   position: relative;
   transition: all 0.75s linear;
 }
-section#timeline article:nth-child(2n + 2) div.inner {
-  float: right;
-  margin: 5px 40px 0 0;
-}
-section#timeline article:nth-child(2n + 2) span.timePeriod {
-  float: left;
-  margin: 15px 0 0 310px;
-}
-section#timeline article:nth-child(2n + 2) div.inner h2:after {
-  left: -5px;
-}
-section#timeline article:nth-child(1) div.inner {
-  &::before {
-    background: #e74c3c;
+section#timeline article:nth-child(2n + 2) {
+  section.card {
+    margin-left: 5%;
   }
-  h2 {
-    background: #e74c3c;
+  span.timePeriod {
+    margin-right: 5px;
+    justify-self: end;
+    transition: all 0.2s ease-in-out;
   }
   h2:after {
+    left: -5px;
+  }
+}
+section#timeline article:nth-child(1) {
+  section.card::before {
+    background: #e74c3c;
+  }
+  section.card h2 {
+    background: #e74c3c;
+  }
+  section.card h2::after {
     background: #e74c3c;
   }
 }
-section#timeline article:nth-child(2) div.inner {
-  &::before {
+section#timeline article:nth-child(2) {
+  section.card::before {
     background: #2ecc71;
   }
   h2 {
@@ -172,8 +150,8 @@ section#timeline article:nth-child(2) div.inner {
     background: #2ecc71;
   }
 }
-section#timeline article:nth-child(3) div.inner {
-  &::before {
+section#timeline article:nth-child(3) {
+  section.card::before {
     background: #e67e22;
   }
   h2 {
@@ -183,8 +161,8 @@ section#timeline article:nth-child(3) div.inner {
     background: #e67e22;
   }
 }
-section#timeline article:nth-child(4) div.inner {
-  &::before {
+section#timeline article:nth-child(4) {
+  section.card::before {
     background: #1abc9c;
   }
   h2 {
