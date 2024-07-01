@@ -7,7 +7,6 @@
 .projectList {
   display: flex;
   flex-wrap: wrap;
-  background-color: blue;
   row-gap: 40px;
   justify-content: space-around;
 }
@@ -15,39 +14,54 @@
 .project {
   display: block;
   max-width: 500px;
-  background-color: red;
   border-radius: 12px;
   overflow: hidden;
+  background-color: wheat;
   z-index: 0;
 
   &::before {
-    z-index: 0;
+    z-index: -1;
     content: " ";
     display: block;
     position: relative;
     width: 32px;
     height: 32px;
-    top: -10px;
-    right: 0px;
-    background-color: #00838d;
+    left: 94%;
+    top: 0;
+    background-color: #f96d00;
     border-radius: 0 0 0 12px;
+    transition: transform 500ms ease-in;
   }
 
   &:hover {
+    &::before {
+      transform: scale(32);
+    }
     .projectTitle {
-      color: black;
-      transition: color 500ms linear;
+      color: #f2f2f2;
+      transition: color 1000ms ease-out;
     }
     .description {
-      color: black;
-      transition: color 500ms linear;
+      color: #f2f2f2;
+      transition: color 1000ms ease-out;
     }
   }
 }
 
 .projectTitle {
+  margin-top: -55px;
+  margin-left: 20px;
   font-weight: bold;
   font-size: 24px;
+  color: black;
+}
+
+.description {
+  width: 90%;
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 35px;
+  color: black;
 }
 
 .go-corner {
@@ -55,10 +69,10 @@
   width: 48px;
   height: 48px;
   left: 91%;
-  top: -15%;
+  top: -19%;
   justify-self: center;
   align-self: center;
-  background-color: #00838d;
+  background-color: #f96d00;
   border-radius: 0 0 0 12px;
 }
 
