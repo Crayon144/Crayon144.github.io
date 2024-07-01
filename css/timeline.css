@@ -175,7 +175,7 @@ section#timeline article:nth-child(4) {
 
 @media (max-width: 900px) {
   section#timeline:before {
-    left: 40px;
+    left: 20px;
   }
   section#timeline article {
     display: flex;
@@ -186,23 +186,23 @@ section#timeline article:nth-child(4) {
     flex-direction: column;
 
     section.card {
-      margin: 20px 0 0 100px;
+      margin: 20px 0 0 90px;
     }
   }
   section#timeline article span.date {
     position: absolute;
     bottom: 75%;
-    left: 8px;
+    left: -9px;
   }
   section#timeline article span.timePeriod {
     margin: 0 0 0 0;
     position: relative;
-    left: 100px;
+    left: 90px;
   }
   section#timeline article section.card {
     position: relative;
-    width: 70%;
+    width: 75%;
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 90px;
   }
 }

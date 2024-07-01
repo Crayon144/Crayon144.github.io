@@ -55,7 +55,7 @@ body {
   min-height: 100vh;
 }
 
-.greeting {
+#greeting {
   width: 100%;
   display: grid;
   height: 100vh;

@@ -1,4 +1,4 @@
-.exp {
+#projectsPage {
   display: flexbox;
   flex-direction: column;
   margin: 20px auto;
@@ -35,7 +35,7 @@
 
   &:hover {
     &::before {
-      transform: scale(32);
+      transform: scale(45);
     }
     .projectTitle {
       color: #f2f2f2;
@@ -49,27 +49,28 @@
 }
 
 .projectTitle {
-  margin-top: -55px;
+  padding-right: 30px;
+  margin-top: -45px;
   margin-left: 20px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 20px;
   color: black;
 }
 
 .description {
   width: 90%;
   margin-top: 5px;
-  margin-left: 20px;
+  margin-left: 0px;
   margin-bottom: 35px;
   color: black;
 }
 
 .go-corner {
   position: relative;
-  width: 48px;
+  width: 58px;
   height: 48px;
-  left: 91%;
-  top: -19%;
+  right: -92%;
+  top: -40px;
   justify-self: center;
   align-self: center;
   background-color: #f96d00;
@@ -79,7 +80,18 @@
 .go-arrow {
   position: relative;
   top: 30%;
-  left: 25%;
+  left: 20%;
   color: white;
   font-family: courier, sans;
+}
+
+@media (max-width: 550px) {
+  .go-corner {
+    right: -87%;
+    top: -35px;
+  }
+  .go-arrow {
+    top: 30%;
+    left: 25%;
+  }
 }
