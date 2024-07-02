@@ -28,7 +28,7 @@
     height: 32px;
     left: 94%;
     top: 0;
-    background-color: #f96d00;
+    background-color: var(--orange);
     border-radius: 0 0 0 12px;
     transition: transform 500ms ease-in;
   }
@@ -38,11 +38,11 @@
       transform: scale(45);
     }
     .projectTitle {
-      color: #f2f2f2;
+      color: var(--white);
       transition: color 1000ms ease-out;
     }
     .description {
-      color: #f2f2f2;
+      color: var(--white);
       transition: color 1000ms ease-out;
     }
   }
@@ -54,7 +54,7 @@
   margin-left: 20px;
   font-weight: bold;
   font-size: 20px;
-  color: black;
+  color: var(--black);
 }
 
 .description {
@@ -62,7 +62,7 @@
   margin-top: 5px;
   margin-left: 0px;
   margin-bottom: 35px;
-  color: black;
+  color: var(--black);
 }
 
 .go-corner {
@@ -73,7 +73,7 @@
   top: -40px;
   justify-self: center;
   align-self: center;
-  background-color: #f96d00;
+  background-color: var(--orange);
   border-radius: 0 0 0 12px;
 }
 
@@ -81,7 +81,7 @@
   position: relative;
   top: 30%;
   left: 20%;
-  color: white;
+  color: var(--white);
   font-family: courier, sans;
   z-index: 2;
 }

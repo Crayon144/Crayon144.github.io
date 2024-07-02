@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --orange: #d65a31;
+  --black: black;
+  --gray: #393e46;
+  --white: #eeeeee;
+  --wheat: wheat;
+}
 html,
 body {
   margin: 0;
@@ -11,7 +18,7 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: black;
+  background-color: var(--black);
   position: fixed; /* Set the navbar to fixed position */
   top: 0px; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -21,23 +28,26 @@ body {
 /* Links inside the navbar */
 #navbar a {
   float: left;
-  display: block;
-  color: black;
+  color: var(--black);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+
+  box-shadow: inset 0 0 0 0 var(--orange);
+  color: var(--black);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Change background on mouse-over */
 #navbar a:hover {
-  background: #ddd;
-  color: black;
+  color: var(--white);
+  box-shadow: inset 200px 0 0 0 var(--orange);
 }
 
 body {
-  background-color: black;
+  background-color: var(--black);
   font-family: "Poppins", sans-serif;
-  color: white;
+  color: var(--white);
 }
 
 #typing {
@@ -48,7 +58,7 @@ body {
 .typed-cursor {
   font-family: "Poppins", sans-serif;
   font-size: 60px;
-  color: white;
+  color: var(--white);
 }
 
 .page {
@@ -72,9 +82,9 @@ body {
 
 .down-arrow {
   font-size: 5em;
-  background-color: black;
+  background-color: var(--black);
   margin-bottom: 10px;
-  color: black;
+  color: var(--black);
   transition: color 2s;
   animation: bounce 1.5s;
   animation-direction: alternate;
@@ -92,11 +102,11 @@ body {
 }
 
 .black2gray {
-  color: gray;
+  color: var(--gray);
 }
 
 .gray2black {
-  color: black;
+  color: var(--black);
 }
 
 @keyframes fadeInUp {
